@@ -1,6 +1,6 @@
 # Add \<ruby\> tags
 Demo  
-![result](https://github.com/GuitarBuilderClass/add_ruby_tags/doc/ruby.gif)
+![result](https://github.com/GuitarBuilderClass/add_ruby_tags/blob/master/doc/ruby.gif?raw=true)
 
 ## Moan
 The \<ruby\> tags are troublesome, aren't these?  

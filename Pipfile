@@ -1,0 +1,26 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+autopep8 = "*"
+pytest = "*"
+pytest-cov = "*"
+parametrized = "*"
+yapf = "*"
+isort = "*"
+mypy = "*"
+radon = "*"
+v = {editable = true,version = "*"}
+
+[packages]
+janome = "*"
+jaconv = "*"
+pipfile = "*"
+regex = "*"
+h11 = "*"
+responder = "*"
+
+[requires]
+python_version = "3.7"

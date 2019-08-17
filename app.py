@@ -1,3 +1,4 @@
+import os
 from datetime import date, datetime
 
 import responder
@@ -47,4 +48,6 @@ api.add_route('', Revision())
 api.add_route('/', Revision())
 
 if __name__ == '__main__':
-    api.run()
+    api.run(address='0.0.0.0',
+            port=5042,
+            )

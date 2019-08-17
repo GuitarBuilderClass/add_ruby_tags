@@ -13,6 +13,7 @@ isort = "*"
 mypy = "*"
 radon = "*"
 v = {editable = true,version = "*"}
+awscli = "*"
 
 [packages]
 janome = "*"

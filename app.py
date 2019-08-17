@@ -48,6 +48,4 @@ api.add_route('', Revision())
 api.add_route('/', Revision())
 
 if __name__ == '__main__':
-    api.run(address='0.0.0.0',
-            port=5042,
-            )
+    api.run(address='0.0.0.0', port=80)

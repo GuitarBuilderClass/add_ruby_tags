@@ -1,7 +1,7 @@
 aiofiles==0.4.0
 aniso8601==6.0.0
 apispec==2.0.1
-apistar==0.7.2
+apistar==0.7.1
 certifi==2019.6.16
 chardet==3.0.4
 click==7.0

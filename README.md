@@ -16,12 +16,26 @@ And, how long does it take to do that?
 - python 3.7+
 
 ## Useage
+First of all, comment out the settings `config/setting.py` other than those you want to use.
+
+e.g., You chose "development" mode
+```python
+# MODE = "production"
+MODE = "development"
+# MODE = "test"
 ```
+This causes `app.py` to read the settings in the `config/production.yaml` file.
+Of course **you need to prepare the file with that name** in advance.
+`config/sample.yaml` is prepared as a sample it.
+
+To launch the app, enter the following command:
+```bash
 $ python app.py
 ```
 
-This app is using the dictionary of MeCab with Janome.  
-Sometimes I notice mistakes in reading between tags. Take care you use it.
+This app is using the dictionary of MeCab with Janome.
+*Sometimes I notice mistakes in reading between tags*.
+Take care you use it.
 
 ## Licence
 Licensed under Apache License 2.0 and uses the MeCab-IPADIC dictionary/statistical model.  

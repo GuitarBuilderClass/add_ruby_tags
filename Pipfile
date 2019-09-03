@@ -5,23 +5,19 @@ verify_ssl = true
 
 [dev-packages]
 autopep8 = "*"
+yapf = "*"
+isort = "*"
 pytest = "*"
 pytest-cov = "*"
 parametrized = "*"
-yapf = "*"
-isort = "*"
-mypy = "*"
 radon = "*"
-v = {editable = true,version = "*"}
-awscli = "*"
 
 [packages]
 janome = "*"
 jaconv = "*"
-pipfile = "*"
 regex = "*"
-h11 = "*"
 responder = "*"
+h11 = "*"
 
 [requires]
 python_version = "3.7"

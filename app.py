@@ -1,7 +1,7 @@
-import os
 from datetime import date, datetime
 
 import responder
+import yaml
 
 from src.add_phonetics import Phonetic
 
@@ -18,7 +18,7 @@ class Revision:
     def on_get(self, req, resp) -> None:
         raw_text = "樹木希林はFUJIカラーで写せない遠いお正月へ旅立ったよ。"
         converted_text = self.p.export_html(raw_text)
-        resp.html = api.template('index.html',
+        resp.html = api.template('japanese.html',
                                  raw_text=raw_text,
                                  converted_text=converted_text)
 
@@ -39,7 +39,7 @@ class Revision:
                 log.write(f"{exec_time}\t{raw}\t{converted}\n")
 
         log()
-        resp.content = api.template('index.html',
+        resp.content = api.template('japanese.html',
                                     raw_text=raw_text,
                                     converted_text=converted_text)
 
@@ -48,4 +48,12 @@ api.add_route('', Revision())
 api.add_route('/', Revision())
 
 if __name__ == '__main__':
-    api.run(address='0.0.0.0', port=80)
+    from config import setting
+    with open(f'./config/{setting.MODE}.yaml') as settings:
+        mode = yaml.load(settings)
+        ENV = mode['ENV']
+        SERVER = mode['SERVER']
+        PORT = mode['PORT']
+
+    print(f"Start in {ENV} mode...")
+    api.run(address=SERVER, port=PORT)
